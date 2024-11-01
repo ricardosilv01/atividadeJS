@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+           
+         }
+
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #3b5998; 
+            backdrop-filter: blur(2.5px);
+            background-image: url(imagens/maxresdefault-29.jpg);
+            
+            
+        }
+
+        .login {
+            width: 320px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+            .login h2 {
+            margin-bottom: 15px;
+            color: #3b5998; 
+            font-size: 24px;
+            font-weight: bold;
+            }
+
+            .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+            .login-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #1877f2; 
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #145dbf; 
+        }
+
+        .forgot-password {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .novaConta {
+            display: block;
+            margin-top: 20px;
+            font-size: 15px;
+            color: #42b72a; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .novaConta:hover {
+            text-decoration: underline
+        }
+
+        .recuperar {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #1877f2;
+            text-decoration: none;
+        }
+
+        .recuperar:hover {
+            text-decoration: underline
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h2>Tela de Login</h2>
+        <form action="#" method="post">
+            <input type="text" id="usuario" class="input-field" placeholder="Usuário" required><br>
+            <input type="password" id="senha" class="input-field" placeholder="Senha" required><br>
+            <button type="button" id="loginButton"  class="login-button">Entrar</button>
+        </form>
+
+        
+        <a href="cadastro.html" class="novaConta">Criar nova conta</a>
+    </div>
+
+    <script>
+         var loginButto = document.getElementById("loginButton");
+        var usuario = document.getElementById("usuario");
+        var senha = document.getElementById("senha");
+
+        loginButto.addEventListener("click", function() {
+            if (usuario.value == "" || senha.value == "") {
+                alert("Por favor, preencha todos os campos!");
+            } else {
+                alert("Login bem-sucedido!");
+                window.location.href = "index.html"; 
+            }
+        });
+
+    </script> 
+</body>
+</html>
